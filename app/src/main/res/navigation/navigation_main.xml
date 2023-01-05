@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.csanad.kotlinshowcase.CategoryFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_mainFragment_to_persistenceFragment"
+            app:destination="@id/persistenceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/persistenceFragment"
+        android:name="com.csanad.kotlinshowcase.persistence.PersistenceFragment"
+        android:label="fragment_persistence"
+        tools:layout="@layout/fragment_persistence" />
+</navigation>
